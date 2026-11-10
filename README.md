@@ -18,7 +18,7 @@ Download the attached **TyriaChronicle-…-windows-x64.zip** from the newest bet
 4. Start GW2 and enable **Tyria Chronicle** in Nexus.
 5. Open it using the clock icon or **Ctrl+Shift+E**.
 
-Your settings are retained when replacing the DLL. No automatic updater is included yet: return to the beta downloads page when a new version is announced.
+Your settings are retained when replacing the DLL. Version 0.2.1-beta enables Nexus update support. Install it manually once if you used 0.2.0-beta, then allow pre-release updates for Tyria Chronicle in Nexus. Nexus can then find newer beta DLLs here according to your update settings. Manual downloads remain available.
 
 [Nexus information and download](https://raidcore.gg/gw2/nexus). Nexus is installed separately; this package does not include it and is not an official Nexus Library listing.
 
@@ -38,6 +38,6 @@ Please include the version shown in Settings, what you did, what happened and wh
 
 ## Beta limitations
 
-Schedules are bundled data, not live map status. Estimated active windows are not guarantees. List templates are farming aids, not complete crafting recipes. Daily completion is per catalog event, including separate Anomaly locations. No GW2 API key or automatic updater is required or included.
+Schedules are bundled data, not live map status. Estimated active windows are not guarantees. List templates are farming aids, not complete crafting recipes. Daily completion is per catalog event, including separate Anomaly locations. No GW2 API key is needed. Updates are provided through Nexus using this public repository.
 
 This repository contains public download information and beta releases. Development source remains in a separate private repository. Package licenses and third-party attribution are included in the downloadable ZIP. Development uses AI-assisted code and documentation. Not affiliated with ArenaNet, NCSOFT, Raidcore or Blish HUD.

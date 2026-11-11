@@ -32,7 +32,7 @@ Your settings are retained when replacing the DLL. Version 0.2.1-beta enables Ne
 
 ## Give feedback
 
-Use the Discord feedback route supplied by ZevaXO with your test invitation. No GitHub account is needed to download the public beta or send Discord feedback. If you have a GitHub account, you may also [open an issue](https://github.com/ZevaXO/TyriaChronicle-beta/issues).
+Report problems, ask for help or share ideas on [our Discord server](https://discord.gg/3gf8n2P9KS). No GitHub account is needed to download the public beta or send Discord feedback. If you prefer GitHub, you may also [open an issue](https://github.com/ZevaXO/TyriaChronicle-beta/issues).
 
 Please include the version shown in Settings, what you did, what happened and what you expected. A cropped screenshot helps. For incorrect event times, include the date, map, time and time zone. Remove personal details from logs and screenshots.
 

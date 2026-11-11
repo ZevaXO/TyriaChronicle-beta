@@ -29,6 +29,8 @@ Your settings are retained when replacing the DLL. Version 0.2.1-beta enables Ne
 - Mark an event **Done today** to stop more reminders until daily reset.
 - Create your own lists, or begin with a template for Obsidian armour, Aurene weapons, HoT materials or a daily meta round.
 - Choose reminders by category or individual event.
+- Check Dawn, Day, Dusk and Night with the fish-marked Fishing button, and enable optional fishing reminders for Tyria or Cantha / Castora.
+- Share an event or an entire train using xx:MM chat times, with Copy and experimental Say.
 
 ## Give feedback
 

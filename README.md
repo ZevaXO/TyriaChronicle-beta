@@ -38,6 +38,6 @@ Please include the version shown in Settings, what you did, what happened and wh
 
 ## Beta limitations
 
-Schedules are bundled data, not live map status. Estimated active windows are not guarantees. List templates are farming aids, not complete crafting recipes. Daily completion is per catalog event, including separate Anomaly locations. No GW2 API key is needed. Updates are provided through Nexus using this public repository.
+Schedules are bundled data, not live map status. Estimated active windows are not guarantees. List templates are farming aids, not complete crafting recipes. Daily completion is per catalog event; Ley-Line Anomaly shares Done today across all three maps until daily reset. Completion is marked manually. No GW2 API key is needed. Updates are provided through Nexus using this public repository.
 
 This repository contains public download information and beta releases. Development source remains in a separate private repository. Package licenses and third-party attribution are included in the downloadable ZIP. Development uses AI-assisted code and documentation. Not affiliated with ArenaNet, NCSOFT, Raidcore or Blish HUD.

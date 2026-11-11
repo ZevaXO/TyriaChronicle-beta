@@ -22,6 +22,12 @@ Your settings are retained when replacing the DLL. Version 0.2.1-beta enables Ne
 
 [Nexus information and download](https://raidcore.gg/gw2/nexus). Nexus is installed separately; this package does not include it and is not an official Nexus Library listing.
 
+## Gw2Launcher / multiple accounts
+
+Use the **addons folder that Nexus uses for the game instance you launch**. With localized execution this can be inside a numbered account folder, for example `Guild Wars 2/Gw2Launcher/1/addons`, rather than the main game's addons folder. Check your launcher configuration and that client's Nexus log; verify Tyria Chronicle appears under Installed in the relevant client.
+
+Install in each separate active addon directory where you want the addon. Some launcher setups share or link folders, so multiple visible addons folders do not necessarily mean separate installations or settings.
+
 ## Why try it?
 
 - See the event, map and a short explanation together.

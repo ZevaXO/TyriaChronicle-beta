@@ -1,0 +1,78 @@
+name: Discord changelog
+
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+concurrency:
+  group: discord-release-${{ github.event.release.id }}
+  cancel-in-progress: false
+
+jobs:
+  announce:
+    if: github.repository == 'ZevaXO/TyriaChronicle-beta' && github.event.release.prerelease == true && github.event.release.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Announce public beta
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_CHANGELOG_WEBHOOK }}
+        shell: python
+        run: |
+          import json, os, re, time
+          import urllib.request, urllib.error
+          from urllib.parse import urlparse
+
+          webhook = os.environ.get("DISCORD_WEBHOOK", "")
+          if not webhook:
+              raise SystemExit("Add the DISCORD_CHANGELOG_WEBHOOK repository secret to enable announcements.")
+          parsed = urlparse(webhook)
+          if parsed.scheme != "https" or parsed.hostname != "discord.com" or not re.fullmatch(r"/api/webhooks/\d+/[A-Za-z0-9._-]+", parsed.path):
+              raise SystemExit("The Discord webhook secret has an unexpected format.")
+          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as stream:
+              release = json.load(stream)["release"]
+          tag = release["tag_name"]
+          if not re.fullmatch(r"v\d+\.\d+\.\d+", tag):
+              raise SystemExit("Expected a numeric beta release tag.")
+          url = release["html_url"]
+          if url != "https://github.com/ZevaXO/TyriaChronicle-beta/releases/tag/" + tag:
+              raise SystemExit("Unexpected release URL.")
+          zip_asset = next((a for a in release["assets"] if a["name"].endswith("-windows-x64.zip")), None)
+          if not zip_asset or not any(a["name"] == "TyriaChronicle.dll" for a in release["assets"]):
+              raise SystemExit("The public beta is missing its ZIP or DLL.")
+          body = release.get("body") or ""
+          section = re.search(r"(?ims)^## (?:What's new|Nytt i den här versionen)\s*\n(.*?)(?=^## |\Z)", body)
+          summary = section.group(1).strip()[:1400] if section else "A new beta is available. See the release notes for changes and installation instructions."
+          payload = {
+              "username": "Tyria Chronicle",
+              "allowed_mentions": {"parse": []},
+              "embeds": [{
+                  "title": release["name"] or tag,
+                  "url": url,
+                  "description": summary,
+                  "color": 12497237,
+                  "fields": [{"name": "Download & release notes", "value": url}],
+                  "footer": {"text": "Windows x64 • Requires Raidcore Nexus • Beta"}
+              }]
+          }
+          data = json.dumps(payload).encode("utf-8")
+          endpoint = webhook + "?wait=true"
+          for attempt in range(3):
+              request = urllib.request.Request(endpoint, data=data, headers={"Content-Type": "application/json", "User-Agent": "TyriaChronicle-Changelog/1.0"})
+              try:
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      if response.status != 200:
+                          raise SystemExit("Discord did not confirm the announcement.")
+                  print("Public beta announcement delivered to Discord.")
+                  break
+              except urllib.error.HTTPError as error:
+                  if error.code == 429 and attempt < 2:
+                      retry = json.loads(error.read()).get("retry_after", 2)
+                      time.sleep(min(float(retry), 30))
+                      continue
+                  raise SystemExit("Discord rejected the announcement (HTTP " + str(error.code) + ").")
+              except urllib.error.URLError:
+                  raise SystemExit("Discord could not be reached. Check the channel before rerunning to avoid duplicates.")
+

@@ -36,7 +36,7 @@ Install in each separate active addon directory where you want the addon. Some l
 - Create your own lists, or begin with a template for Obsidian armour, Aurene weapons, HoT materials or a daily meta round.
 - Choose reminders by category or individual event.
 - Check Dawn, Day, Dusk and Night with the fish-marked Fishing button, and enable optional fishing reminders for Tyria or Cantha / Castora.
-- Share an event or an entire train using xx:MM chat times, with Copy and experimental Say.
+- Share an event or an entire train using xx:MM chat times, with Copy; paste into your chosen game chat channel yourself.
 
 ## Give feedback
 
@@ -49,3 +49,5 @@ Please include the version shown in Settings, what you did, what happened and wh
 Schedules are bundled data, not live map status. Estimated active windows are not guarantees. List templates are farming aids, not complete crafting recipes. Daily completion is per catalog event; Ley-Line Anomaly shares Done today across all three maps until daily reset. Completion is marked manually. No GW2 API key is needed. Updates are provided through Nexus using this public repository.
 
 This repository contains public download information and beta releases. Development source remains in a separate private repository. Package licenses and third-party attribution are included in the downloadable ZIP. Development uses AI-assisted code and documentation. Not affiliated with ArenaNet, NCSOFT, Raidcore or Blish HUD.
+
+From 0.2.13-beta, sharing uses Copy only; experimental Say has been removed. Shackles of the Ancients countdowns and reminders are paused while its changed schedule is unverified. Festival dates cover 2026 only. The addon checks the public GitHub version feed after startup and hourly; GitHub receives ordinary connection metadata. No account telemetry is collected. No official approval is implied.

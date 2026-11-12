@@ -41,6 +41,10 @@ From 0.2.14-beta, category icons and the app header clock use original AI-genera
 - Check Dawn, Day, Dusk and Night with the fish-marked Fishing button, and enable optional fishing reminders for Tyria or Cantha / Castora.
 - Share an event or an entire train using xx:MM chat times, with Copy; paste into your chosen game chat channel yourself.
 
+## Train planning
+
+From 0.2.15-beta, open Edit list to choose starts, adjust estimated durations and map-change margin, and see possible overlaps. Train preview offers Find events for this gap with community-route suggestions. Chosen starts are saved per list and used by Share list; expired/unavailable choices use the next start. Reminders and the main timeline keep normal schedules. The Classic meta train template provides Piñata -> Chak Gerent -> Octovine. Estimates and suggestions do not guarantee completion or a populated map.
+
 ## Give feedback
 
 Report problems, ask for help or share ideas on [our Discord server](https://discord.gg/3gf8n2P9KS). No GitHub account is needed to download the public beta or send Discord feedback. If you prefer GitHub, you may also [open an issue](https://github.com/ZevaXO/TyriaChronicle-beta/issues).

@@ -30,6 +30,9 @@ Install in each separate active addon directory where you want the addon. Some l
 
 ## Why try it?
 
+From 0.2.14-beta, category icons and the app header clock use original AI-generated silver/brass artwork. No game images were supplied as generation references for this set. The Nexus menu icon remains monochrome.
+
+
 - See the event, map and a short explanation together.
 - Copy a waypoint directly from a reminder.
 - Mark an event **Done today** to stop more reminders until daily reset.

@@ -10,6 +10,10 @@ By **ZevaXO**. Requires **Windows x64 and Raidcore Nexus**. Early beta: feedback
 
 Download the attached **TyriaChronicle-…-windows-x64.zip** from the newest beta release, not GitHub's automatically generated Source code ZIP. Read its release notes before installing.
 
+## Startup fix in 0.2.16-beta
+
+The Nexus clock shortcut now registers even when its images are not ready at startup. Delayed category artwork and the header clock recover without Disable/Load. The main window still starts closed; open it with the clock or Ctrl+Shift+E.
+
 ## Install or update
 
 1. Close Guild Wars 2.

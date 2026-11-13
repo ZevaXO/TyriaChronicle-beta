@@ -42,7 +42,7 @@ From 0.2.14-beta, category icons and the app header clock use original AI-genera
 
 
 - See the event, map and a short explanation together.
-- Copy a waypoint directly from a reminder.
+- Copy a waypoint or a message with event name and time directly from a compact reminder.
 - Mark an event **Done today** to stop more reminders until daily reset.
 - Create your own lists, or begin with a template for Obsidian armour, Aurene weapons, HoT materials or a daily meta round.
 - Choose reminders by category or individual event.

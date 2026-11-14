@@ -4,9 +4,9 @@
 
 By **ZevaXO**. Requires **Windows x64 and Raidcore Nexus**. Early beta: feedback is welcome.
 
-## Important upgrade from 0.2.15 / 0.2.16
+## Important upgrade from 0.2.15–0.2.22
 
-Close GW2 and install 0.2.17-beta or newer by manually replacing the DLL from its ZIP. The older DLL can crash while unloading during a live update; installing the fix with the game closed avoids that old cleanup path. Keep your settings folder.
+Close GW2 and install 0.2.24-beta or newer by manually replacing the DLL from its ZIP. Older versions can crash or hang while unloading during a live update, including from Nexus Configure. Installing with the game closed avoids the old unload path. Keep your settings folder.
 
 ## Download
 

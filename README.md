@@ -70,3 +70,7 @@ From 0.2.13-beta, sharing uses Copy only; experimental Say has been removed. Sha
 ## Find gemstone rewards
 
 Open Filters > Amalgamated Gemstone, or search for the reward name. The gemstone symbol marks a reviewed reward choice; hover it or open event details for conditions and shared daily limits. It does not detect claimed rewards.
+
+## Weekly boss
+
+Find Weekly boss above the event list, even before activation. Use Manage weekly boss to enable reminders or change the target. Confirm suggestions against your in-game objective. Mark Done this week directly in the event list or reminder popup to stop that boss's reminders until Monday 07:30 UTC; undo is available. No achievement completion is detected automatically.
